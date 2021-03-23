@@ -1,0 +1,15 @@
+Sekvenssikaavio uuden muistiinpanon lisääminen spa
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over selain:
+Post pyynnön mukana selaimelle myös viesti ja aikaleima json-muodossa
+end note
+
+palvelin-->selain: 201 created
+
+
+
+note over palvelin:
+json-data tallennettu palvelimelle
+end note

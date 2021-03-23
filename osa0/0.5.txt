@@ -1,0 +1,20 @@
+Sekvenssikaavio SPA
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin-->selain: 200 lataa HTML
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: Tyylitiedosto .css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin-->selain: Javascript tiedosto .js
+
+
+note over selain:
+selain suorittaa js koodin ja hakee JSON-tiedoston palvelimelta
+end note
+
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: json tiedosto
+
+note over selain:
+tapahtumakäsittelijä->renderöi muistiinpanot listaksi selaimelle

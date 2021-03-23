@@ -1,0 +1,22 @@
+Sekvenssikaavio uuden muistiinpanon lisääminen
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+palvelin-->selain: 302 uudelleenohjauspyyntö
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin-->selain: 200 lataa muistiinpanosivun uudelleen
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: Tyylitiedosto .css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: Javascript tiedosto .js
+
+
+note over selain:
+selain suorittaa js koodin ja hakee JSON-tiedoston palvelimelta
+end note
+
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: json tiedosto
+
+note over selain:
+tapahtumakäsittelijä->renderöi muistiinpanot listaksi selaimelle
