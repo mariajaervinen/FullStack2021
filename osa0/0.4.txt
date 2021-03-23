@@ -1,4 +1,4 @@
-Sekvenssikaavio uuden muistiinpanon lisääminen
+Sekvenssikaavio uuden muistiinpanon lisääminen tavallinen
 
 selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 palvelin-->selain: 302 uudelleenohjauspyyntö
